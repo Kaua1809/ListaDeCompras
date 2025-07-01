@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input, button {
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: #fff;
+  margin: 8px 0;
+  padding: 10px;
+  border-left: 5px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.pago {
+  border-left-color: green;
+  color: green;
+  font-weight: bold;
+}
+
+.mensagem {
+  display: none;
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}

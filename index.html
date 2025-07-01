@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🛒 Lista de Compras do Supermercado</h1>
+
+  <div id="mensagem" class="mensagem"></div>
+
+  <form id="form-compra">
+    <input type="text" id="produto" placeholder="Nome do produto" required />
+    <input type="number" id="quantidade" placeholder="Quantidade" required min="1"/>
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <ul id="lista-compras"></ul>
+
+  <button id="limpar">🗑 Limpar Lista</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
