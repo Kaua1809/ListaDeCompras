@@ -3,23 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lista de Compras</title>
+  <title>⭐ Lista de Compras ⭐</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>🛒 Lista de Compras do Supermercado</h1>
+  <h1>⭐ Lista de Compras do Supermercado ⭐</h1>
 
   <div id="mensagem" class="mensagem"></div>
 
   <form id="form-compra">
-    <input type="text" id="produto" placeholder="Nome do produto" required />
-    <input type="number" id="quantidade" placeholder="Quantidade" required min="1"/>
+    <select id="produto" required>
+      <optgroup label="🍽️ Comidas">
+        <option value="Arroz">Arroz</option>
+        <option value="Feijão">Feijão</option>
+        <option value="Macarrão">Macarrão</option>
+      </optgroup>
+      <optgroup label="🥤 Bebidas">
+        <option value="Suco">Suco</option>
+        <option value="Refrigerante">Refrigerante</option>
+        <option value="Água">Água</option>
+      </optgroup>
+      <optgroup label="🍰 Sobremesas">
+        <option value="Sorvete">Sorvete</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Bolo">Bolo</option>
+      </optgroup>
+    </select>
+    <input type="number" id="quantidade" placeholder="Quantidade" required min="1" max="10"/>
     <button type="submit">Adicionar</button>
   </form>
 
   <ul id="lista-compras"></ul>
 
   <button id="limpar">🗑 Limpar Lista</button>
+
+  <!-- Modal para nome e email -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Finalize a compra</h2>
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu e-mail" required>
+      <button id="confirmar-compra">Confirmar Compra</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
