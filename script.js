@@ -9,12 +9,25 @@ const confirmarCompra = document.getElementById("confirmar-compra");
 const nomeInput = document.getElementById("nome");
 const emailInput = document.getElementById("email");
 const contadorCliques = document.getElementById("contador-cliques");
+const toggleDark = document.getElementById("toggle-dark");
+const seletorDaltonismo = document.getElementById("seletor-daltonismo");
 
 const ESTOQUE_MAX = 100;
 
-// Carregar contador de cliques
+// Carregar preferências
 let cliquesLimpar = parseInt(localStorage.getItem("contadorLimpar")) || 0;
 contadorCliques.textContent = `Lista limpa ${cliquesLimpar} vezes.`;
+
+if (localStorage.getItem("temaDark") === "true") {
+  document.body.classList.add("dark");
+  toggleDark.textContent = "☀️ Modo Claro";
+}
+
+const daltonismo = localStorage.getItem("daltonismo") || "";
+if (daltonismo) {
+  document.body.classList.add(daltonismo);
+  seletorDaltonismo.value = daltonismo;
+}
 
 window.addEventListener("load", carregarLista);
 
@@ -57,6 +70,24 @@ confirmarCompra.addEventListener("click", () => {
   } else {
     alert("Preencha nome e e-mail!");
   }
+});
+
+// Dark Mode
+toggleDark.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const isDark = document.body.classList.contains("dark");
+  toggleDark.textContent = isDark ? "☀️ Modo Claro" : "🌙 Modo Escuro";
+  localStorage.setItem("temaDark", isDark);
+});
+
+// Modo Daltonismo
+seletorDaltonismo.addEventListener("change", () => {
+  document.body.classList.remove("protanopia", "deuteranopia", "tritanopia");
+  const valor = seletorDaltonismo.value;
+  if (valor) {
+    document.body.classList.add(valor);
+  }
+  localStorage.setItem("daltonismo", valor);
 });
 
 function mostrarMensagem(texto) {
