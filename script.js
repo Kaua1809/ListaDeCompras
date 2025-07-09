@@ -8,8 +8,13 @@ const modal = document.getElementById("modal");
 const confirmarCompra = document.getElementById("confirmar-compra");
 const nomeInput = document.getElementById("nome");
 const emailInput = document.getElementById("email");
+const contadorCliques = document.getElementById("contador-cliques");
 
 const ESTOQUE_MAX = 100;
+
+// Carregar contador de cliques
+let cliquesLimpar = parseInt(localStorage.getItem("contadorLimpar")) || 0;
+contadorCliques.textContent = `Lista limpa ${cliquesLimpar} vezes.`;
 
 window.addEventListener("load", carregarLista);
 
@@ -39,6 +44,10 @@ btnLimpar.addEventListener("click", function () {
   localStorage.removeItem("listaCompras");
   lista.innerHTML = "";
   mostrarMensagem("Lista limpa!");
+
+  cliquesLimpar++;
+  contadorCliques.textContent = `Lista limpa ${cliquesLimpar} vezes.`;
+  localStorage.setItem("contadorLimpar", cliquesLimpar);
 });
 
 confirmarCompra.addEventListener("click", () => {
