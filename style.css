@@ -28,38 +28,38 @@ body.dark .modal-content {
 
 /* Protanopia - dificuldade com vermelho */
 body.protanopia {
-  background-color: #111;  /* fundo neutro mais escuro */
+  background-color: #1b4b26;  /* fundo neutro mais escuro */
   color: #F0F0F0;  /* texto cinza claro */
 }
 
 body.protanopia li {
   background-color: #3399FF; /* Azul forte */
   color: #F0F0F0; /* Texto cinza claro */
-  border-left: 5px solid #F0F0F0; /* Borda cinza claro */
+  border-left: 5px solid #ffbb00; /* Borda cinza claro */
 }
 
 /* Deuteranopia - dificuldade com verde */
 body.deuteranopia {
-  background-color: #111;  /* fundo neutro mais escuro */
-  color: #F0F0F0;  /* texto cinza claro */
+  background-color: #6a98bdea;  /* fundo neutro mais escuro */
+  color: #34664f;  /* texto cinza claro */
 }
-
+s
 body.deuteranopia li {
-  background-color: #FF6347; /* Tom laranja avermelhado */
-  color: #F0F0F0; /* Texto cinza claro */
-  border-left: 5px solid #F0F0F0; /* Borda cinza claro */
+  background-color: #17445e; /* Tom laranja avermelhado */
+  color: #ffffff; /* Texto cinza claro */
+  border-left: 5px solid #91f7b6; /* Borda cinza claro */
 }
 
 /* Tritanopia - dificuldade com azul e amarelo */
 body.tritanopia {
-  background-color: #111;  /* fundo neutro mais escuro */
-  color: #F0F0F0;  /* texto cinza claro */
+  background-color: #e1b3e7fa;  /* fundo neutro mais escuro */
+  color: #880071;  /* texto cinza claro */
 }
 
 body.tritanopia li {
-  background-color: #FFB6C1; /* Rosa claro */
-  color: #F0F0F0; /* Texto cinza claro */
-  border-left: 5px solid #F0F0F0; /* Borda cinza claro */
+  background-color: #73a767; /* Rosa claro */
+  color: #000000; /* Texto cinza claro */
+  border-left: 5px solid #ff59cd; /* Borda cinza claro */
 }
 
 /* Restante do estilo padrão */
